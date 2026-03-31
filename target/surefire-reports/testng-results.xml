@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2026-03-30T15:58:27 IST" name="Suite" finished-at="2026-03-30T15:58:41 IST" duration-ms="13566">
+    <groups>
+    </groups>
+    <test started-at="2026-03-30T15:58:27 IST" name="Test" finished-at="2026-03-30T15:58:41 IST" duration-ms="13566">
+      <class name="district.districtTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:district.districtTest@223f3642]" started-at="2026-03-30T15:58:27 IST" name="setup" finished-at="2026-03-30T15:58:38 IST" duration-ms="10405" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="selectLocation()[pri:0, instance:district.districtTest@223f3642]" started-at="2026-03-30T15:58:38 IST" name="selectLocation" finished-at="2026-03-30T15:58:40 IST" duration-ms="2261" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- selectLocation -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:district.districtTest@223f3642]" started-at="2026-03-30T15:58:40 IST" name="tearDown" finished-at="2026-03-30T15:58:41 IST" duration-ms="796" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- district.districtTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
