@@ -3,7 +3,7 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-      <class name="district.districtTest"/>
+      <class name="tests.DistrictTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

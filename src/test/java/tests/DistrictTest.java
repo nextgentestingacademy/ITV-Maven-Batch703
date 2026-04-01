@@ -1,42 +1,42 @@
 package tests;
 
-import java.time.Duration;
-
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import base.BaseClass;
 import pages.HomePage;
 import pages.SearchPage;
 
-public class DistrictTest {
+public class DistrictTest extends BaseClass{
 	private static HomePage home;
 	private static SearchPage search;
-	private static WebDriver driver;
-
-	@BeforeMethod()
-	public static void setup() {
-		driver = new ChromeDriver();
-		driver.manage().window().maximize();
-		driver.get("https://www.district.in/");
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-		home = new HomePage();
-		search = new SearchPage();
+//	private static MovieDetailsPage movieDetails;
+//	private static BookTicketPage book;
+	
+	@BeforeMethod(alwaysRun = true)
+	public static void initializePages() {
+		home = new HomePage(driver);
+		search = new SearchPage(driver);
+//		movieDetails = new MovieDetailsPage();
+//		book = new BookTicketPage();
 	}
 	
+	
 	@Test
-	public static void searchMovie() {
+	public static void bookMovie() {
 		home.clickSearch();//click on the Search image on the Home page
 		search.clickMovies();//click on the Movies link on the Search page
 		search.enterTextToSearch("Dhurandhar"); //enter Dhurandhar in the search box on the Search page
 		Assert.assertTrue(search.getSearchResult().trim().contains("Dhurandhar"));
+//		search.selectMovie();
+//		movieDetails.selectDay();
+//		movieDetails.addFilter();
+//		movieDetails.selectTheatre();
+//		movieDetails.selectShowTime();
+//		book.selectSeats();
+//		book.clickBookNow();
 	}
 	
-	@AfterMethod()
-	public static void tearDown() {
-		driver.quit();
-	}
+	
 }
