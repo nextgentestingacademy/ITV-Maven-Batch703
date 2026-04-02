@@ -12,6 +12,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
 import utils.ConfigReader;
+import utils.LoggerUtils;
 
 
 public class BaseClass {
@@ -40,7 +41,7 @@ public class BaseClass {
 		
 		driver.manage().window().maximize();
 		driver.get(ConfigReader.get("url"));
-		
+		LoggerUtils.info("Launched the application");
 		int time = Integer.parseInt(ConfigReader.get("timeout"));
 		
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(time));
@@ -49,6 +50,7 @@ public class BaseClass {
 	@AfterMethod(alwaysRun = true)
 	public static void tearDown() {
 		driver.quit();
+		LoggerUtils.info("Closed the browser");
 	}
 	
 	public static void elementClick(WebElement elm) {
@@ -56,10 +58,10 @@ public class BaseClass {
 			if(elm.isEnabled()) {
 				elm.click();
 			}else {
-				System.out.println("Element is not enabled");
+				LoggerUtils.fail("Element is not enabled");
 			}
 		}else {
-			System.out.println("Element is not displayed");
+			LoggerUtils.fail("Element is not displayed");
 		}
 	}
 
@@ -68,10 +70,10 @@ public class BaseClass {
 			if(elm.isEnabled()) {
 				elm.sendKeys(text);
 			}else {
-				System.out.println("Element is not enabled");
+				LoggerUtils.fail("Element is not enabled");
 			}
 		}else {
-			System.out.println("Element is not displayed");
+			LoggerUtils.fail("Element is not displayed");
 		}
 	}
 }

@@ -6,6 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import base.BaseClass;
+import utils.LoggerUtils;
 
 public class HomePage extends BaseClass{
 	WebDriver driver;
@@ -32,11 +33,13 @@ public class HomePage extends BaseClass{
 //		driver.findElement(imgSearch).click();
 //		imgSearch.click();
 		elementClick(imgSearch);
+		LoggerUtils.info("Clicked on Search icon");
 	}
 	
 	public void clickLocation() {
 //		driver.findElement(imgLocation).click();
-		imgLocation.click();
+//		imgLocation.click();
 		elementClick(imgLocation);
+		LoggerUtils.info("Clicked on Location icon");
 	}
 }

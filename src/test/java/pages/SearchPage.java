@@ -6,6 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import base.BaseClass;
+import utils.LoggerUtils;
 
 public class SearchPage extends BaseClass{
 	WebDriver driver;
@@ -36,17 +37,20 @@ public class SearchPage extends BaseClass{
 //		driver.findElement(lnkMovies).click();
 //		lnkMovies.click();
 		elementClick(lnkMovies);
-		
+		LoggerUtils.info("Clicked on Movies link");
 	}
 	
 	public void enterTextToSearch(String text) {
 //		driver.findElement(edtSearch).sendKeys(text);
 //		edtSearch.sendKeys(text);
 		enterText(edtSearch,text);
+		LoggerUtils.info("Entered " + text + " in the search editbox");
 	}
 	
 	public String getSearchResult() {
 //		return driver.findElement(lnkSearchResult).getText();
-		return lnkSearchResult.getText();
+		String text = lnkSearchResult.getText();
+		LoggerUtils.info("Extracted Search Result text as " + text);
+		return text;
 	}
 }

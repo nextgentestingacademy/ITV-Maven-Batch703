@@ -7,10 +7,12 @@ import org.testng.annotations.Test;
 import base.BaseClass;
 import pages.HomePage;
 import pages.SearchPage;
+import utils.LoggerUtils;
 
 public class DistrictTest extends BaseClass{
 	private static HomePage home;
 	private static SearchPage search;
+	
 //	private static MovieDetailsPage movieDetails;
 //	private static BookTicketPage book;
 	
@@ -25,10 +27,12 @@ public class DistrictTest extends BaseClass{
 	
 	@Test
 	public static void bookMovie() {
+		LoggerUtils.info("Test case - bookMovie execution started");
 		home.clickSearch();//click on the Search image on the Home page
 		search.clickMovies();//click on the Movies link on the Search page
 		search.enterTextToSearch("Dhurandhar"); //enter Dhurandhar in the search box on the Search page
-		Assert.assertTrue(search.getSearchResult().trim().contains("Dhurandhar"));
+		Assert.assertTrue(search.getSearchResult().trim().contains("Dhurandhar123"));
+		LoggerUtils.pass("Search Result is showing the correct Movie details");
 //		search.selectMovie();
 //		movieDetails.selectDay();
 //		movieDetails.addFilter();
@@ -36,7 +40,6 @@ public class DistrictTest extends BaseClass{
 //		movieDetails.selectShowTime();
 //		book.selectSeats();
 //		book.clickBookNow();
+		LoggerUtils.info("Test case - bookMovie execution completed");
 	}
-	
-	
 }
