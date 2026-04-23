@@ -31,7 +31,7 @@ public class DistrictTest extends BaseClass{
 		home.clickSearch();//click on the Search image on the Home page
 		search.clickMovies();//click on the Movies link on the Search page
 		search.enterTextToSearch("Dhurandhar"); //enter Dhurandhar in the search box on the Search page
-		Assert.assertTrue(search.getSearchResult().trim().contains("Dhurandhar123"));
+		Assert.assertTrue(search.getSearchResult().trim().contains("Dhurandhar"));
 		LoggerUtils.pass("Search Result is showing the correct Movie details");
 //		search.selectMovie();
 //		movieDetails.selectDay();
