@@ -26,7 +26,7 @@ public class DistrictTest extends BaseClass{
 	
 	
 	@Test
-	public static void bookMovie() {
+	public static void bookMovie() throws InterruptedException {
 		LoggerUtils.info("Test case - bookMovie execution started");
 		home.clickSearch();//click on the Search image on the Home page
 		search.clickMovies();//click on the Movies link on the Search page

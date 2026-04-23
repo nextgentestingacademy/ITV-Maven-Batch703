@@ -40,11 +40,12 @@ public class SearchPage extends BaseClass{
 		LoggerUtils.info("Clicked on Movies link");
 	}
 	
-	public void enterTextToSearch(String text) {
+	public void enterTextToSearch(String text) throws InterruptedException {
 //		driver.findElement(edtSearch).sendKeys(text);
 //		edtSearch.sendKeys(text);
 		enterText(edtSearch,text);
 		LoggerUtils.info("Entered " + text + " in the search editbox");
+		Thread.sleep(3000);
 	}
 	
 	public String getSearchResult() {
