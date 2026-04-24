@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-04-23T15:52:30 IST" name="Suite" finished-at="2026-04-23T15:52:44 IST" duration-ms="14144">
+  <suite started-at="2026-04-23T15:53:26 IST" name="Suite" finished-at="2026-04-23T15:53:39 IST" duration-ms="13371">
     <groups>
     </groups>
-    <test started-at="2026-04-23T15:52:30 IST" name="Test" finished-at="2026-04-23T15:52:44 IST" duration-ms="14144">
+    <test started-at="2026-04-23T15:53:26 IST" name="Test" finished-at="2026-04-23T15:53:39 IST" duration-ms="13371">
       <class name="tests.DistrictTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:tests.DistrictTest@4278a03f]" started-at="2026-04-23T15:52:30 IST" name="setup" finished-at="2026-04-23T15:52:39 IST" duration-ms="8669" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:tests.DistrictTest@4278a03f]" started-at="2026-04-23T15:53:26 IST" name="setup" finished-at="2026-04-23T15:53:34 IST" duration-ms="7136" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method is-config="true" signature="initializePages()[pri:0, instance:tests.DistrictTest@4278a03f]" started-at="2026-04-23T15:52:39 IST" name="initializePages" finished-at="2026-04-23T15:52:39 IST" duration-ms="117" status="PASS">
+        <test-method is-config="true" signature="initializePages()[pri:0, instance:tests.DistrictTest@4278a03f]" started-at="2026-04-23T15:53:34 IST" name="initializePages" finished-at="2026-04-23T15:53:34 IST" duration-ms="79" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializePages -->
-        <test-method signature="bookMovie()[pri:0, instance:tests.DistrictTest@4278a03f]" started-at="2026-04-23T15:52:39 IST" name="bookMovie" finished-at="2026-04-23T15:52:43 IST" duration-ms="4059" status="PASS">
+        <test-method signature="bookMovie()[pri:0, instance:tests.DistrictTest@4278a03f]" started-at="2026-04-23T15:53:34 IST" name="bookMovie" finished-at="2026-04-23T15:53:39 IST" duration-ms="5172" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- bookMovie -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.DistrictTest@4278a03f]" started-at="2026-04-23T15:52:43 IST" name="tearDown" finished-at="2026-04-23T15:52:44 IST" duration-ms="723" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.DistrictTest@4278a03f]" started-at="2026-04-23T15:53:39 IST" name="tearDown" finished-at="2026-04-23T15:53:39 IST" duration-ms="632" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
