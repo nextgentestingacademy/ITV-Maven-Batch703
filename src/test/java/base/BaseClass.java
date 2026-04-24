@@ -23,6 +23,8 @@ public class BaseClass {
 
 //		String browser = ConfigReader.get("browser");
 		String browser = System.getProperty("browser","chrome");
+		System.out.println("Browser: " + browser);
+		LoggerUtils.info("Browser: " + browser);
 		
 		switch (browser) {
 		case "chrome":
