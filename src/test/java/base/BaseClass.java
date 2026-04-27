@@ -46,7 +46,19 @@ public class BaseClass {
 		
 		
 		driver.manage().window().maximize();
-		driver.get(ConfigReader.get("url"));
+		
+		//read the environment value from Jenkins
+		String env = System.getProperty("env");
+		
+		//if value not received from Jenkins, read from config file
+		if(env == null || env.isEmpty()) {
+			env = ConfigReader.get("env");
+		}
+		
+		//read the url based on environment
+		String url = ConfigReader.get(env + "_url");
+		driver.get(url);
+		
 		LoggerUtils.info("Launched the application");
 		int time = Integer.parseInt(ConfigReader.get("timeout"));
 		
