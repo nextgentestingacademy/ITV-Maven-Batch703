@@ -4,9 +4,9 @@ pipeline {
 
 	triggers {
 		parameterizedCron('''
-			40 15 * * * % BROWSER=chrome;ENVIRONMENT=qa
-			42 15 * * * % BROWSER=firefox;ENVIRONMENT=uat
-			44 15 * * * % BROWSER=edge;ENVIRONMENT=prod
+			48 15 * * * % BROWSER=chrome;ENVIRONMENT=qa
+			50 15 * * * % BROWSER=firefox;ENVIRONMENT=uat
+			52 15 * * * % BROWSER=edge;ENVIRONMENT=prod
 			'''
 		)
 	}
