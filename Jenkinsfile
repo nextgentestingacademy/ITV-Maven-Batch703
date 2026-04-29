@@ -1,5 +1,16 @@
 pipeline {
     agent any
+
+
+	triggers {
+		parameterizedCron('''
+			40 15 * * * % BROWSER=chrome;ENVIRONMENT=qa
+			42 15 * * * % BROWSER=firefox;ENVIRONMENT=uat
+			44 15 * * * % BROWSER=edge;ENVIRONMENT=prod
+			'''
+		)
+	}
+
     
     parameters{
 		choice(
@@ -14,7 +25,6 @@ pipeline {
 		)
 	}
     
-
     tools {
         jdk 'Java_JDK'
         maven 'MAVEN'
